@@ -1,0 +1,984 @@
+/* p5 styles start */
+body {
+  padding: 0;
+  margin: 0;
+}
+
+canvas {
+  vertical-align: top;
+  z-index: -1;
+}
+/* p5 styles end */
+
+
+html {
+  max-height: 720px;
+  max-width: 1280px;
+  min-height: 720px;
+  min-width: 1280px;
+}
+
+/* ======== Title ========== */
+#titleWrapper {
+  z-index: 1;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.titleBackground {
+  position: relative;
+
+  -webkit-animation-iteration-count: 1;
+  -moz-animation-iteration-count: 1;
+  -o-animation-iteration-count: 1;
+}
+
+.titleLogo {
+  position: absolute;
+  left: 40%;
+  top: 33%;
+
+  -webkit-animation-iteration-count: 1;
+  -moz-animation-iteration-count: 1;
+  -o-animation-iteration-count: 1;
+}
+
+.titleTitle {
+  position: absolute;
+  left: 30%;
+  top: 0%;
+
+  color: white;
+  font-size: 130px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  letter-spacing: 2px;
+
+  -webkit-animation-iteration-count: 1;
+  -moz-animation-iteration-count: 1;
+  -o-animation-iteration-count: 1;
+}
+
+.titleCTA {
+  position: absolute;
+  left: 39%;
+  top: 80%;
+
+  color: rgba(255,255,255,1);
+  font-size: 35px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  letter-spacing: 2px;
+
+  -webkit-animation-iteration-count: 1;
+  -moz-animation-iteration-count: 1;
+  -o-animation-iteration-count: 1;
+}
+.titleCTA:hover {
+  color: rgba(255,255,255,0.6);
+  cursor: pointer;
+}
+
+/* ======== Warning ========== */
+#warningWrapper {
+  z-index: 1;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+.warningBackground {
+  position: relative;
+
+  -webkit-animation-iteration-count: 1;
+  -moz-animation-iteration-count: 1;
+  -o-animation-iteration-count: 1;
+}
+
+.warningText {
+  position: absolute;
+  left: 26%;
+  top: 44%;
+  width: 50%;
+
+  color: white;
+  font-size: 24px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  letter-spacing: 2px;
+
+  -webkit-animation-iteration-count: 1;
+  -moz-animation-iteration-count: 1;
+  -o-animation-iteration-count: 1;
+}
+
+
+.warningMic {
+  height: 200px;
+  position: absolute;
+  left: 7%;
+  top: 36%;
+
+  -webkit-animation-iteration-count: 1;
+  -moz-animation-iteration-count: 1;
+  -o-animation-iteration-count: 1;
+}
+
+.warningWebcam {
+  height: 200px;
+  position: absolute;
+  right: 5%;
+  top: 36%;
+
+  -webkit-animation-iteration-count: 1;
+  -moz-animation-iteration-count: 1;
+  -o-animation-iteration-count: 1;
+}
+
+/* ======== Instructions 1 ========== */
+#instructions1Wrapper {
+  z-index: 1;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+.instructions1Background {
+  position: relative;
+
+  -webkit-filter: brightness(0.2);
+  filter: brightness(0.2);
+
+  -webkit-animation-iteration-count: 1;
+  -moz-animation-iteration-count: 1;
+  -o-animation-iteration-count: 1;
+
+  -webkit-transition: 1s ease-in-out;
+  -moz-transition: 1s ease-in-out;
+  -ms-transition: 1s ease-in-out;
+  -o-transition: 1s ease-in-out;
+  transition : 1s ease-in-out;
+}
+
+.instructions1Popup1 {
+  position: absolute;
+  left: 2%;
+  top: 8%;
+  width: 43%;
+
+  color: white;
+  font-size: 22px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 200;
+  letter-spacing: 2px;
+  text-align: center;
+
+  -webkit-animation-iteration-count: 1;
+  -moz-animation-iteration-count: 1;
+  -o-animation-iteration-count: 1;
+}
+
+.instructions1Arrow1{
+  position: absolute;
+  left: 46%;
+  top: 17%;
+
+  color: white;
+
+  -webkit-animation-iteration-count: 1;
+  -moz-animation-iteration-count: 1;
+  -o-animation-iteration-count: 1;
+}
+.instructions1Arrow1 i {
+  font-size: 70px;
+}
+
+.instructions1Popup2 {
+  position: absolute;
+  right: 2%;
+  top: 8%;
+  width: 29%;
+
+  color: white;
+  font-size: 22px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 200;
+  letter-spacing: 2px;
+  text-align: center;
+
+  -webkit-animation-iteration-count: 1;
+  -moz-animation-iteration-count: 1;
+  -o-animation-iteration-count: 1;
+}
+
+.instructions1Arrow2 {
+  position: absolute;
+  right: 5%;
+  top: 33%;
+
+  -webkit-transform: rotateZ(180deg);
+  -ms-transform: rotateZ(180deg);
+  transform: rotateZ(180deg);
+
+  color: white;
+
+  -webkit-animation-iteration-count: 1;
+  -moz-animation-iteration-count: 1;
+  -o-animation-iteration-count: 1;
+}
+.instructions1Arrow2 i {
+  font-size: 70px;
+}
+
+.instructions1Popup3 {
+  position: absolute;
+  left: 2%;
+  top: 73%;
+  width: 38%;
+
+  color: white;
+  font-size: 22px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 200;
+  letter-spacing: 2px;
+  text-align: center;
+
+  -webkit-animation-iteration-count: 1;
+  -moz-animation-iteration-count: 1;
+  -o-animation-iteration-count: 1;
+}
+
+.instructions1Arrow3 {
+  position: absolute;
+  left: 40%;
+  top: 75%;
+
+  color: white;
+
+  -webkit-animation-iteration-count: 1;
+  -moz-animation-iteration-count: 1;
+  -o-animation-iteration-count: 1;
+}
+.instructions1Arrow3 i {
+  font-size: 70px;
+}
+
+.instructions1Popup4 {
+  position: absolute;
+  right: 13%;
+  top: 65%;
+  width: 22%;
+
+  color: white;
+  font-size: 22px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 200;
+  letter-spacing: 2px;
+  text-align: center;
+
+  -webkit-animation-iteration-count: 1;
+  -moz-animation-iteration-count: 1;
+  -o-animation-iteration-count: 1;
+}
+
+.instructions1Arrow4 {
+  position: absolute;
+  right: 23%;
+  top: 55%;
+
+  color: white;
+
+  -webkit-animation-iteration-count: 1;
+  -moz-animation-iteration-count: 1;
+  -o-animation-iteration-count: 1;
+}
+.instructions1Arrow4 i {
+  font-size: 70px;
+}
+
+.instructions1Popup5 {
+  position: absolute;
+  left: 2%;
+  top: 40%;
+  width: 30%;
+
+  color: white;
+  font-size: 22px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 200;
+  letter-spacing: 2px;
+  text-align: center;
+
+  -webkit-animation-iteration-count: 1;
+  -moz-animation-iteration-count: 1;
+  -o-animation-iteration-count: 1;
+}
+
+.instructions1Arrow5 {
+  position: absolute;
+  left: 33%;
+  top: 45%;
+
+  color: white;
+
+  -webkit-animation-iteration-count: 1;
+  -moz-animation-iteration-count: 1;
+  -o-animation-iteration-count: 1;
+}
+.instructions1Arrow5 i {
+  font-size: 70px;
+}
+
+
+/* ======== Instructions 2 ========== */
+#instructions2Wrapper {
+  z-index: 1;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+.instructions2Background {
+  -webkit-filter: brightness(0.2);
+  filter: brightness(0.2);
+
+  position: relative;
+
+  -webkit-animation-iteration-count: 1;
+  -moz-animation-iteration-count: 1;
+  -o-animation-iteration-count: 1;
+}
+
+.instructions2Popup1 {
+  position: absolute;
+  left: 31%;
+  top: 10%;
+  width: 39%;
+
+  color: white;
+  font-size: 22px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 200;
+  letter-spacing: 2px;
+  text-align: center;
+
+  -webkit-animation-iteration-count: 1;
+  -moz-animation-iteration-count: 1;
+  -o-animation-iteration-count: 1;
+}
+
+.instructions2Arrow1 {
+  position: absolute;
+  left: 22%;
+  top: 13%;
+
+  color: white;
+
+  -webkit-animation-iteration-count: 1;
+  -moz-animation-iteration-count: 1;
+  -o-animation-iteration-count: 1;
+}
+.instructions2Arrow1 i {
+  font-size: 70px;
+}
+.instructions2Arrow11 {
+  position: absolute;
+  right: 22%;
+  top: 13%;
+
+  color: white;
+
+  -webkit-animation-iteration-count: 1;
+  -moz-animation-iteration-count: 1;
+  -o-animation-iteration-count: 1;
+}
+.instructions2Arrow11 i {
+  font-size: 70px;
+}
+
+.instructions2Popup2 {
+  position: absolute;
+  left: 20%;
+  top: 75%;
+  width: 38%;
+
+  color: white;
+  font-size: 22px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 200;
+  letter-spacing: 2px;
+  text-align: center;
+
+  -webkit-animation-iteration-count: 1;
+  -moz-animation-iteration-count: 1;
+  -o-animation-iteration-count: 1;
+}
+
+.instructions2Arrow2 {
+  position: absolute;
+  left: 12%;
+  top: 75%;
+
+  color: white;
+
+  -webkit-animation-iteration-count: 1;
+  -moz-animation-iteration-count: 1;
+  -o-animation-iteration-count: 1;
+}
+.instructions2Arrow2 i {
+  font-size: 70px;
+}
+
+.instructions2Popup3 {
+  position: absolute;
+  left: 32%;
+  top: 47%;
+  width: 38%;
+
+  color: white;
+  font-size: 22px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 200;
+  letter-spacing: 2px;
+  text-align: center;
+
+  -webkit-animation-iteration-count: 1;
+  -moz-animation-iteration-count: 1;
+  -o-animation-iteration-count: 1;
+}
+
+.instructions2Arrow3 {
+  position: absolute;
+  left: 25%;
+  top: 45%;
+
+  color: white;
+
+  -webkit-animation-iteration-count: 1;
+  -moz-animation-iteration-count: 1;
+  -o-animation-iteration-count: 1;
+}
+.instructions2Arrow3 i {
+  font-size: 70px;
+}
+
+
+/* ======== Keyboard Layout ========== */
+#keyboardLayoutWrapper {
+  z-index: 1;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+.keyboardLayoutBackground {
+  position: relative;
+
+  -webkit-animation-iteration-count: 1;
+  -moz-animation-iteration-count: 1;
+  -o-animation-iteration-count: 1;
+}
+
+.keyboardLayoutKeyboardPic {
+  position: absolute;
+  left: 40%;
+  top: 30%;
+
+  -webkit-animation-iteration-count: 1;
+  -moz-animation-iteration-count: 1;
+  -o-animation-iteration-count: 1;
+}
+
+.keyboardLayoutTitle {
+  position: absolute;
+  left: 35%;
+  top: 0%;
+
+  color: white;
+  font-size: 40px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  letter-spacing: 2px;
+
+  -webkit-animation-iteration-count: 1;
+  -moz-animation-iteration-count: 1;
+  -o-animation-iteration-count: 1;
+}
+
+.keyboardLayoutText1 {
+  position: absolute;
+  left: 24%;
+  top: 18%;
+  width: 24%;
+
+  color: white;
+  font-size: 16px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 200;
+  letter-spacing: 2px;
+  text-align: center;
+
+  -webkit-animation-iteration-count: 1;
+  -moz-animation-iteration-count: 1;
+  -o-animation-iteration-count: 1;
+}
+
+.keyboardLayoutArrow1 {
+  position: absolute;
+  left: 42%;
+  top: 25%;
+
+  -webkit-transform: rotateZ(180deg);
+  -ms-transform: rotateZ(180deg);
+  transform: rotateZ(180deg);
+
+  color: white;
+
+  -webkit-animation-iteration-count: 1;
+  -moz-animation-iteration-count: 1;
+  -o-animation-iteration-count: 1;
+}
+.keyboardLayoutArrow1 i {
+  font-size: 70px;
+}
+
+.keyboardLayoutText2 {
+  position: absolute;
+  right: 3%;
+  top: 18%;
+  width: 22%;
+
+  color: white;
+  font-size: 16px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 200;
+  letter-spacing: 2px;
+  text-align: center;
+
+  -webkit-animation-iteration-count: 1;
+  -moz-animation-iteration-count: 1;
+  -o-animation-iteration-count: 1;
+}
+
+.keyboardLayoutArrow2 {
+  position: absolute;
+  right: 7%;
+  top: 25%;
+
+  -webkit-transform: rotateZ(180deg);
+  -ms-transform: rotateZ(180deg);
+  transform: rotateZ(180deg);
+
+  color: white;
+
+  -webkit-animation-iteration-count: 1;
+  -moz-animation-iteration-count: 1;
+  -o-animation-iteration-count: 1;
+}
+.keyboardLayoutArrow2 i {
+  font-size: 70px;
+}
+
+.keyboardLayoutText3 {
+  position: absolute;
+  left: 10%;
+  top: 40%;
+  width: 24%;
+
+  color: white;
+  font-size: 16px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 200;
+  letter-spacing: 2px;
+  text-align: center;
+
+  -webkit-animation-iteration-count: 1;
+  -moz-animation-iteration-count: 1;
+  -o-animation-iteration-count: 1;
+}
+
+.keyboardLayoutArrow3 {
+  position: absolute;
+  left: 35%;
+  top: 45%;
+
+  color: white;
+
+  -webkit-animation-iteration-count: 1;
+  -moz-animation-iteration-count: 1;
+  -o-animation-iteration-count: 1;
+}
+.keyboardLayoutArrow3 i {
+  font-size: 70px;
+}
+
+.keyboardLayoutText4 {
+  position: absolute;
+  left: 16%;
+  bottom: 12%;
+  width: 30%;
+
+  color: white;
+  font-size: 16px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 200;
+  letter-spacing: 2px;
+  text-align: center;
+
+  -webkit-animation-iteration-count: 1;
+  -moz-animation-iteration-count: 1;
+  -o-animation-iteration-count: 1;
+}
+
+.keyboardLayoutArrow4 {
+  position: absolute;
+  left: 45%;
+  bottom: 13%;
+
+  color: white;
+
+  -webkit-animation-iteration-count: 1;
+  -moz-animation-iteration-count: 1;
+  -o-animation-iteration-count: 1;
+}
+.keyboardLayoutArrow4 i {
+  font-size: 70px;
+}
+
+.keyboardLayoutText5 {
+  position: absolute;
+  right: 3%;
+  bottom: 10%;
+  width: 30%;
+
+  color: white;
+  font-size: 16px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 200;
+  letter-spacing: 2px;
+  text-align: center;
+
+  -webkit-animation-iteration-count: 1;
+  -moz-animation-iteration-count: 1;
+  -o-animation-iteration-count: 1;
+}
+
+.keyboardLayoutArrow5 {
+  position: absolute;
+  right: 33%;
+  bottom: 13%;
+
+  color: white;
+
+  -webkit-animation-iteration-count: 1;
+  -moz-animation-iteration-count: 1;
+  -o-animation-iteration-count: 1;
+}
+.keyboardLayoutArrow5 i {
+  font-size: 70px;
+}
+
+
+
+
+
+
+/* ============================= */
+/* ======== Main Menu ========== */
+/* ============================= */
+#mainMenuWrapper {
+  z-index: 1;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+#mainMenuNav {
+  z-index: 5;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: auto;
+
+  font-family: 'Raleway', sans-serif;
+
+  padding-top: 15%;
+  padding-right: 40px;
+  padding-bottom: 18.5%;
+  border-right: 5px solid white;
+
+  -webkit-animation-iteration-count: 1;
+  -moz-animation-iteration-count: 1;
+  -o-animation-iteration-count: 1;
+}
+
+#mainMenuNav li:nth-child(1) {
+  font-size: 50px;
+  text-decoration: underline;
+  margin-bottom: 30%;
+}
+#mainMenuNav li:nth-child(1):hover {
+  color: white;
+  cursor: default;
+}
+
+#mainMenuNav li {
+  color: white;
+  list-style: none;
+  font-size: 22px;
+  margin-bottom: 30%;
+}
+#mainMenuNav li:hover {
+  cursor: pointer;
+  color: rgba(255,255,255, 0.6);
+}
+
+.menuCloseBtn {
+  z-index: 5;
+  position: absolute;
+  top: 1%;
+  right: 1%;
+
+  color: white;
+
+  -webkit-animation-iteration-count: 1;
+  -moz-animation-iteration-count: 1;
+  -o-animation-iteration-count: 1;
+}
+.menuCloseBtn:hover {
+  color: rgba(255,255,255,0.6);
+  cursor: pointer;
+}
+.menuCloseBtn i {
+  font-size: 50px;
+}
+
+.menuBackground {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  -webkit-animation-iteration-count: 1;
+  -moz-animation-iteration-count: 1;
+  -o-animation-iteration-count: 1;
+}
+
+
+/* ======== Menu Title ========== */
+#menuTitleWrapper {
+  z-index: 1;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.menuTitleBackground {
+  position: relative;
+
+  -webkit-animation-iteration-count: 1;
+  -moz-animation-iteration-count: 1;
+  -o-animation-iteration-count: 1;
+}
+
+.menuTitleLogo {
+  position: absolute;
+  left: 40%;
+  top: 33%;
+
+  margin-left: 10%;
+
+  -webkit-animation-iteration-count: 1;
+  -moz-animation-iteration-count: 1;
+  -o-animation-iteration-count: 1;
+}
+
+.menuTitleTitle {
+  position: absolute;
+  left: 30%;
+  top: 0%;
+
+  margin-left: 10%;
+
+  color: white;
+  font-size: 130px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  letter-spacing: 2px;
+
+  -webkit-animation-iteration-count: 1;
+  -moz-animation-iteration-count: 1;
+  -o-animation-iteration-count: 1;
+}
+
+/* ======== Menu Controls ========== */
+#menuKeyboardControls {
+  z-index: 1;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+.menuKeyboardControlsTitle {
+  position: absolute;
+  left: 33%;
+  top: 0%;
+
+  margin-left: 6%;
+
+  color: white;
+  font-size: 70px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  letter-spacing: 2px;
+  text-align: center;
+
+  -webkit-animation-iteration-count: 1;
+  -moz-animation-iteration-count: 1;
+  -o-animation-iteration-count: 1;
+}
+
+.menuKeyboardControlsPic {
+  position: absolute;
+  top: 0;
+  left: 22%;
+  width: 78%;
+
+  margin-top: 5%;
+
+  -webkit-animation-iteration-count: 1;
+  -moz-animation-iteration-count: 1;
+  -o-animation-iteration-count: 1;
+}
+
+
+
+
+
+/* ======== Menu Get In Touch ========== */
+#menuGetInTouch {
+  z-index: 1;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+.menuGetInTouchTitle {
+  position: absolute;
+  left: 33%;
+  top: 0%;
+
+  margin-left: 12%;
+
+  color: white;
+  font-size: 70px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  letter-spacing: 2px;
+  text-align: center;
+
+  -webkit-animation-iteration-count: 1;
+  -moz-animation-iteration-count: 1;
+  -o-animation-iteration-count: 1;
+}
+
+.menuGetInTouchSubtitle {
+  position: absolute;
+  left: 28%;
+  top: 0;
+  width: 50%;
+
+  margin-left: 10%;
+  margin-top: 18%;
+
+  color: white;
+  font-size: 26px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  letter-spacing: 2px;
+  text-align: center;
+
+  -webkit-animation-iteration-count: 1;
+  -moz-animation-iteration-count: 1;
+  -o-animation-iteration-count: 1;
+}
+
+.menuGetInTouchEmail {
+  position: absolute;
+  left: 28%;
+  top: 0;
+  width: 50%;
+
+  margin-left: 10%;
+  margin-top: 30%;
+
+  color: white;
+  font-size: 28px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  letter-spacing: 2px;
+  text-align: center;
+
+  -webkit-animation-iteration-count: 1;
+  -moz-animation-iteration-count: 1;
+  -o-animation-iteration-count: 1;
+}
+.menuGetInTouchEmail a {
+  color: red;
+}
+.menuGetInTouchEmail a:hover {
+  color: rgba(255,0,0,0.6);
+}
+
+
+#menuSoundcloud {
+  z-index: 1;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+.menuSoundcloudTitle {
+  position: absolute;
+  left: 33%;
+  top: 0%;
+
+  margin-left: 10%;
+
+  color: white;
+  font-size: 70px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  letter-spacing: 2px;
+  text-align: center;
+
+  -webkit-animation-iteration-count: 1;
+  -moz-animation-iteration-count: 1;
+  -o-animation-iteration-count: 1;
+}
+
+.menuSoundcloudConnectBtn {
+  position: absolute;
+  left: 28%;
+  top: 0;
+  /*width: 50%;*/
+
+  margin-left: 25%;
+  margin-top: 30%;
+
+  -webkit-animation-iteration-count: 1;
+  -moz-animation-iteration-count: 1;
+  -o-animation-iteration-count: 1;
+}
+.menuSoundcloudConnectBtn:hover {
+  cursor: pointer;
+}

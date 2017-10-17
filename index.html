@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Music App</title>
+    <script src="libraries/p5.js" type="text/javascript"></script>
+
+    <script src="libraries/p5.dom.js" type="text/javascript"></script>
+    <script src="libraries/p5.soundOld.js" type="text/javascript"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Raleway:200,300,400,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="styles/font-awesome/css/font-awesome.min.css"/>
+
+    <link rel="stylesheet" href="styles/styles.css"/>
+    <link rel="stylesheet" href="libraries/animate.css"/>
+
+    <script src="libraries/jquery-2.2.2.js" type="text/javascript"></script>
+
+    <!--Plugins required for Fist Detection Start-->
+    <script src="libraries/js-objectdetect-master/js/compatibility.js" type="text/javascript"></script>
+    <script src="libraries/js-objectdetect-master/js/objectdetect.js" type="text/javascript"></script>
+    <script src="libraries/js-objectdetect-master/js/objectdetect.handfist.js" type="text/javascript"></script>
+    <!--Plugins required for Fist Detection End-->
+
+    <script src="modules/sampler/customButton.js" type="text/javascript"></script>
+    <script src="modules/sampler/menuButton.js" type="text/javascript"></script>
+
+    <script src="modules/sampler/samplerButton.js" type="text/javascript"></script>
+    <script src="modules/sampler/samplerEffectButton.js" type="text/javascript"></script>
+    <script src="modules/sampler/samplerDisplay.js" type="text/javascript"></script>
+    <script src="modules/effectsRack/effectsRack.js" type="text/javascript"></script>
+
+    <script src="modules/mouseControlWindow/mouseControlWin.js" type="text/javascript"></script>
+    <script src="modules/recordingStudio/recordingStudio.js" type="text/javascript"></script>
+
+    <script src="modules/instrumentRoom/instrumentButton.js" type="text/javascript"></script>
+
+    <script src="modules/visualiser/visualiser.js" type="text/javascript"></script>
+
+    <script src="modules/viewController.js" type="text/javascript"></script>
+    <script src="sketch.js" type="text/javascript"></script>
+
+    <script src="modules/mouseControlWindow/fistDetection.js" type="text/javascript"></script>
+    <script src="modules/animations.js" type="text/javascript"></script>
+  </head>
+  <body>
+    <!--Detection Window for testing-->
+    <!-- <canvas id='detection' style="position: absolute; z-index: 1001; top: 0px; right: 0px; opacity: 0.9;"> -->
+
+    <!-- Title and Instruction Slides Start -->
+    <div id="titleWrapper">
+      <img src="assets/images/background.png" class="titleBackground">
+      <img src="assets/images/logo.png" class="titleLogo">
+      <h1 class="titleTitle">GestAPC</h1>
+      <p class="titleCTA">Click To Continue...</p>
+    </div>
+
+    <div id="warningWrapper">
+      <img src="assets/images/background.png" class="warningBackground">
+      <img src="assets/images/mic.png" class="warningMic">
+      <img src="assets/images/webcam.png" class="warningWebcam">
+      <h2 class="warningText">For the best experience, please make sure that you have a working webcam and mic attached...</h2>
+    </div>
+
+    <div id="instructions1Wrapper">
+      <img src="assets/images/backgroundStatic.png" class="instructions1Background">
+      <p class="instructions1Popup1">This is the <strong>Mouse Control Window</strong>, where you use the X/Y axis to control effects in the Effects Rack.<br/><br/>Note: by holding down the control (CTRL) key, you enable webcam gesture control and can control effects by curling your hand into a fist</p>
+      <p class="instructions1Arrow1"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></p>
+      <p class="instructions1Popup2">This is the <strong>Effects Rack</strong>, where you can add effects to samples using the yellow effects buttons, and can control them using the X/Y axis in the Mouse Control Window</p>
+      <p class="instructions1Arrow2"><i class="fa fa-long-arrow-up" aria-hidden="true"></i></p>
+      <p class="instructions1Popup3">This is the <strong>Sample Window</strong>, where you select which samples you want to play and can addeffects to samples by clicking the yellow effects buttons and then clicking on an effect in the Effects Rack</p>
+      <p class="instructions1Arrow3"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></p>
+      <p class="instructions1Popup4">Click the 'Clear FX' button to clear all effects while samples are still playing. Otherwise, click the 'Reset' button to reset everything back to their default settings</p>
+      <p class="instructions1Arrow4"><i class="fa fa-long-arrow-up" aria-hidden="true"></i></p>
+      <p class="instructions1Popup5">Here are four instruments provide different timbres depending on which osscilation shapes you choose. Pitch frequencies can be controlled in the Mouse Control Window by mouse or webcam gestures</p>
+      <p class="instructions1Arrow5"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></p>
+    </div>
+
+    <div id="instructions2Wrapper">
+      <img src="assets/images/backgroundAction.png" class="instructions2Background">
+      <p class="instructions2Popup1">These are <strong>Visualisers</strong>, which display the sample amplitude spectrum and waveform on the right-hand side and the amplitude of the Recording Studio on the left-hand side</p>
+      <p class="instructions2Arrow1"><i class="fa fa-long-arrow-left" aria-hidden="true"></i></p>
+      <p class="instructions2Arrow11"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></p>
+      <p class="instructions2Popup2">This is the <strong>Recording Studio</strong>, where you can record and play back up to 4 of your own samples using a built-in or connected microphone</p>
+      <p class="instructions2Arrow2"><i class="fa fa-long-arrow-left" aria-hidden="true"></i></p>
+      <p class="instructions2Popup3">Click the 'Strobe' button for additional visualiser effects</p>
+      <p class="instructions2Arrow3"><i class="fa fa-long-arrow-left" aria-hidden="true"></i></p>
+    </div>
+
+    <div id="keyboardLayoutWrapper">
+      <img src="assets/images/background.png" class="keyboardLayoutBackground">
+      <img src="assets/images/keyboardLayout.png" class="keyboardLayoutKeyboardPic">
+      <h1 class="keyboardLayoutTitle">Keyboard Shortcuts</h1>
+      <p class="keyboardLayoutText1"><strong>Escape Key</strong> - press to reset all samples and effects back to default settings</p>
+      <p class="keyboardLayoutArrow1"><i class="fa fa-long-arrow-up" aria-hidden="true"></i></p>
+      <p class="keyboardLayoutText2"><strong>Backspace</strong> - press to clear all effects while samples are still playing</p>
+      <p class="keyboardLayoutArrow2"><i class="fa fa-long-arrow-up" aria-hidden="true"></i></p>
+      <p class="keyboardLayoutText3"><strong>Number and Letter Keys</strong> - press to toggle turning effects button on/off and sample playback (with space held down)<br/><br/>Rows correspond with the 4x4 Sample Window grid</p>
+      <p class="keyboardLayoutArrow3"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></p>
+      <p class="keyboardLayoutText4"><strong>Control Key (CTRL)</strong> - hold to activate webcam fist detection</p>
+      <p class="keyboardLayoutArrow4"><i class="fa fa-long-arrow-up" aria-hidden="true"></i></p>
+      <p class="keyboardLayoutText5"><strong>Spacebar</strong> - hold to switch between toggling effects button on/off and sample playback</p>
+      <p class="keyboardLayoutArrow5"><i class="fa fa-long-arrow-up" aria-hidden="true"></i></p>
+    </div>
+    <!-- Title and Instruction Slides End -->
+
+    <!-- Main Menu Start -->
+    <div id="mainMenuWrapper">
+      <nav id="mainMenuNav">
+        <ul>
+          <li class="mainMenuLink">Menu</li>
+          <li class="keyboardControlsMenuLink">Keyboard Controls</li>
+          <li class="getInTouchMenuLink">Get In Touch</li>
+        </ul>
+      </nav>
+      <p class="menuCloseBtn"><i class="fa fa-times" aria-hidden="true"></i></p>
+      <div id="menuTitleWrapper">
+        <img src="assets/images/background.png" class="menuTitleBackground">
+        <img src="assets/images/logo.png" class="menuTitleLogo">
+        <h1 class="menuTitleTitle">GestAPC</h1>
+      </div>
+      <div id="menuKeyboardControls">
+        <img src="assets/images/background.png" class="menuTitleBackground">
+        <h1 class="menuKeyboardControlsTitle">Keyboard Controls</h1>
+        <img src="assets/images/menuKeyboardLayout.png" class="menuKeyboardControlsPic">
+      </div>
+      <div id="menuGetInTouch">
+        <img src="assets/images/background.png" class="menuTitleBackground">
+        <h1 class="menuGetInTouchTitle">Get in Touch!</h1>
+        <p class="menuGetInTouchSubtitle">If you have any suggestions on how we can improve this application, please don't hesitate to get in touch using the email below!</p>
+        <p class="menuGetInTouchEmail"><a href="mailto:gest_apc@support.com">gest_apc@support.com</a></p>
+      </div>
+    </div>
+    <!-- Main Menu End -->
+
+  </body>
+</html>
